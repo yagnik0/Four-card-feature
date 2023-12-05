@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    max-width: fit-content;
+}
+
+/* Header styles starts */
+.header-style {
+  text-align: center;
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.heading-style {
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.para-head {
+    font-size: 3rem;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+.para-style {
+    color:hsl(229, 6%, 66%);
+    font-size: 1.3rem;
+    text-align: center;
+    display: inline;
+}
+/* Header style ends */
+
+
+/* Grid container style starts */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.box-style {
+    padding: 1.5rem;
+    max-width: 30rem;
+    min-height: 35vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.first-box{
+    border-top: 4px hsl(180, 62%, 55%) solid;
+    transform: translateY(50%);
+}
+
+.second-box {
+    border-top: 4px hsl(0, 78%, 62%) solid;
+}
+
+.third-box {
+    border-top: 4px hsl(212, 86%, 64%) solid;
+    transform: translateY(50%);
+}
+
+.fourth-box {
+    grid-column: 2/3;
+    border-top: 4px hsl(34, 97%, 64%) solid;
+}
+
+.box-head {
+    color:hsl(234, 12%, 34%) ;
+}
+
+.box-para {
+    color: hsl(229, 6%, 66%)
+}
+
+.image-style {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+}
+
+@media only screen and (max-width : 750px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5;
+    }
+    .first-box {
+        transform: translate(0);
+    }
+
+    .third-box {
+        transform: translate(0);
+    }
+    
+}
+
+@media only screen and (max-width:650px){
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
